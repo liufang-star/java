@@ -1,0 +1,26 @@
+ package 接口继承多态.txt;
+
+public class aa_pad extends aa_computer {    //子类！！！ 平板电脑
+	//子类（aa_pad）继承 父类（aa_computer）
+	
+	String battery = "5000毫安电池！";
+
+	public aa_pad(){     //注意：在定义构造方法之前不能定义其他初始化方法！
+		//this.screen = super.screen;
+		super();
+		this.screen = super.screen;
+	}
+	
+	void open5G() {         //定义一个成员方法！（打开5G）
+		System.out.println("打开5G网络......");
+	}
+	
+	void showPicture() {    //定义一个成员方法！
+		System.out.println("平板电脑：用手指点击触摸屏！");
+	}
+	
+	String sayHello() {      
+		return super.sayHello()+"平板电脑！";  //调用父类原有的方法（super关键字！）！
+	}
+
+}
